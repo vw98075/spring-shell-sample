@@ -12,10 +12,7 @@ public record LoginPromptProvider(LoginService service) implements PromptProvide
     public AttributedString getPrompt() {
 
         return service.isLoggedIn() ?
-                new AttributedString(this.service.loggedInUser() + " >", AttributedStyle.DEFAULT.foreground(AttributedStyle.GREEN)) :
-                new AttributedString("(unknown) >", AttributedStyle.DEFAULT.foreground(AttributedStyle.RED));
-
+                new AttributedString(service.loggedInUser() + " $ ", AttributedStyle.DEFAULT.foreground(AttributedStyle.GREEN)) :
+                new AttributedString("(anonymous) $ ", AttributedStyle.DEFAULT.foreground(AttributedStyle.RED));
     }
-
-
 }

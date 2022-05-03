@@ -20,6 +20,6 @@ public record LoginCommands(LoginService service) {
     public Availability logoutAvailability(){
         return this.service.isLoggedIn() ?
                 Availability.available() :
-                Availability.unavailable("Not log in yet");
+                Availability.unavailable("Not sign in yet");
     }
 }
