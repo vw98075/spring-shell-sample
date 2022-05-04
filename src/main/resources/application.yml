@@ -1,0 +1,9 @@
+logging:
+  level:
+    root: off
+spring:
+  main:
+    banner-mode: off
+
+service:
+  url: http://localhost:8080/api
